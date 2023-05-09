@@ -13,15 +13,15 @@ const FavsCounter = () => {
 
   useEffect(()=>{
 
-    if(favs.length > 0){
-      setTotalFavs(totalFavs + 1)
-
+    if(favs){         
+      
+      setTotalFavs(favs.length)
     }
   }, [favs])
 
 
   return (
-    <div className='text-sm absolute top-[-7px] right-[-7px]'>{totalFavs} </div>
+    <div className='text-sm absolute top-[-10px] right-[-10px]'>{totalFavs} </div>
   )
 }
 

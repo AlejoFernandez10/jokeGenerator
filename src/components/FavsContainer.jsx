@@ -6,6 +6,8 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 import {MdOutlineFavoriteBorder} from 'react-icons/md'
 import FavCard from './FavCard'
 import { Context } from '@/Context/ContextProvider'
+import Link from 'next/link'
+import FavsCounter from './FavsCounter'
 
 
 
@@ -24,7 +26,10 @@ const FavsContainer = () => {
 
   if(open === false){
     return(
-      <MdOutlineFavoriteBorder onClick={()=> setOpen(true)} />
+      <div onClick={()=> setOpen(true)}>
+      <MdOutlineFavoriteBorder  />
+      <FavsCounter />
+      </div>
     )
   }
   return (
@@ -87,7 +92,9 @@ const FavsContainer = () => {
                       </div>
                     </div>
 
-                    
+                    <div className='min-h-[200px]  flex justify-center items-center border-t-2'>
+                           <Link href={'/favs'} onClick={()=> setOpen(false)} className='text-white  border border-yellow-500 px-12 py-3 rounded-lg transition-all duration-200 hover:bg-yellow-500 hover:text-black'>Expand Favs</Link>   
+                    </div>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>

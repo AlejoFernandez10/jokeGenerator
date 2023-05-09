@@ -40,6 +40,7 @@ const Buttons = ({setup, punchline, id , btnState}) => {
           if(joke.id === id){
             return{
               ...joke,
+              qty:1
             }
           }
         })
@@ -71,20 +72,20 @@ const Buttons = ({setup, punchline, id , btnState}) => {
 
       <div className='mt-20 flex gap-4  items-start justify-end'>
 
-       <div className='relative button-container transition-all duration-200'>
+       <div className='relative button-container transition-all duration-200 hover:text-yellow-500'>
 
          {btnLike ? <AiFillLike className='text-3xl cursor-pointer text-yellow-500' onClick={(()=> setBtnLike(false))} />  : <AiOutlineLike className='text-3xl cursor-pointer ' onClick={(()=> setBtnLike(true))} />}
 
-         <span className='absolute bottom-[-30px] button-name transition-all duration-200 '>Like</span>
+         <span className='absolute bottom-[-30px] button-name text-yellow-500 '>Like</span>
        </div>
 
        {/* FAV BUTTON */}
 
-       <div className='relative button-container transition-all duration-200 mt-0.5'>
+       <div className='relative button-container transition-all duration-200 hover:text-yellow-500 mt-0.5'>
 
-          {btnFav ? <MdOutlineFavorite className='text-3xl cursor-pointer text-yellow-500' onClick={(()=> setBtnFav(false))} />  : <MdOutlineFavoriteBorder className='text-3xl cursor-pointer ' onClick={(()=> setBtnFav(true) & addToFavs()  )} />}
+          {btnFav ? <MdOutlineFavorite className='text-3xl cursor-pointer text-yellow-500' onClick={(()=> setBtnFav(false))} />  : <MdOutlineFavoriteBorder className='text-3xl cursor-pointer  ' onClick={(()=> setBtnFav(true) & addToFavs()  )} />}
 
-          <span className='absolute bottom-[-30px] button-name transition-all duration-200 '>Fav</span>
+          <span className='absolute bottom-[-30px] button-name text-yellow-500 '>Fav</span>
         </div>
          
       </div>
