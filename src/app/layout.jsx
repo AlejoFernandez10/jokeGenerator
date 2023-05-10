@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import ContextProvider from '@/Context/ContextProvider'
+import Link from 'next/link'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -24,7 +25,7 @@ export default function RootLayout({ children }) {
         
         </ContextProvider>
 
-        <footer className='w-full'></footer>
+        <footer className='w-full text-center absolute bottom-3 text-white'>Developed by <Link className='underline transition-all duration-200 hover:text-yellow-400' href={'https://www.linkedin.com/in/alejo-fernandez-23821b243/'}>Alejo Fernandez</Link> </footer>
         </body>
     </html>
   )
