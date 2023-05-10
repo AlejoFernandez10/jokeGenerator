@@ -12,7 +12,7 @@ const page = () => {
     <div className=' text-white w-full flex  justify-center '>
       
       <div className='w-[95%] max-w-[800px] flex flex-col '>
-        <h1 className='mt-20 text-3xl mb-10 font-semibold'>Favs</h1>
+        
 
         <ContainerFavsPage />
         

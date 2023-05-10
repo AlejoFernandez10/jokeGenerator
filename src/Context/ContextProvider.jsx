@@ -4,13 +4,13 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { createContext } from 'react'
 
-export const Context = createContext(null)
+export const Context = createContext([])
 
 
 const ContextProvider = ({children}) => {
 
   const [favs, setFavs] = useState(() => {
-    const savedFavs = typeof window !== 'undefined' ? localStorage.getItem('favs') : null
+    const savedFavs = typeof window !== 'undefined' ? localStorage.getItem('favs') : []
     return savedFavs ? JSON.parse(savedFavs) : []
   })
 

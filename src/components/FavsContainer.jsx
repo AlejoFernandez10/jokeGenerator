@@ -3,7 +3,7 @@
 import { Fragment, useState, useContext } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import {MdOutlineFavoriteBorder} from 'react-icons/md'
+import {MdOutlineFavoriteBorder, MdOutlineFavorite} from 'react-icons/md'
 import FavCard from './FavCard'
 import { Context } from '@/Context/ContextProvider'
 import Link from 'next/link'
@@ -82,9 +82,11 @@ const FavsContainer = () => {
 
                             {favs.map((fav)=>(
 
-                            <li key={fav.id} className=''>
+                            <li key={fav.id} className='relative'>
 
-                              <FavCard setup={fav.setup} punchline={fav.punchline} />
+                              <FavCard setup={fav.setup} id={fav.id} punchline={fav.punchline} />                              
+                                
+                              
                             </li>
                             ))}
                           </ul>
@@ -93,7 +95,7 @@ const FavsContainer = () => {
                     </div>
 
                     <div className='min-h-[200px]  flex justify-center items-center border-t-2'>
-                           <Link href={'/favs'} onClick={()=> setOpen(false)} className='text-white  border border-yellow-500 px-12 py-3 rounded-lg transition-all duration-200 hover:bg-yellow-500 hover:text-black'>Expand Favs</Link>   
+                           <Link href={'/favs'} onClick={()=> setOpen(false)} className='text-white  border border-yellow-500 px-14 py-3 rounded-lg transition-all duration-200 hover:bg-yellow-500 hover:text-black'>Expand Favs</Link>   
                     </div>
                   </div>
                 </Dialog.Panel>

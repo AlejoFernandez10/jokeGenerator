@@ -12,11 +12,11 @@ const Navbar = () => {
   return (
     <header className='w-full flex justify-center pt-12'>
 
-      <nav className='w-full max-w-[800px] flex justify-between'>
+      <nav className='w-[90%] max-w-[800px] flex justify-between'>
 
-        <Link href={'/'} className='text-white text-3xl flex gap-1'>
+        <Link href={'/'} className='text-white text-lg sm:text-2xl md:text-3xl flex gap-1'>
 
-            <FaRegLaughSquint className='text-yellow-500' />
+            <FaRegLaughSquint className='text-yellow-500 ' />
               JokeGenerator
         </Link>
         <ul className='flex items-center gap-5'>

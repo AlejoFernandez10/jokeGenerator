@@ -1,6 +1,5 @@
 'use client'
-import {AiOutlineLike} from 'react-icons/ai'
-import {AiFillLike} from 'react-icons/ai'
+
 import {MdOutlineFavoriteBorder} from 'react-icons/md'
 
 import {MdOutlineFavorite} from 'react-icons/md'
@@ -12,7 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Buttons = ({setup, punchline, id , btnState}) => {
 
-  const [btnLike, setBtnLike] = useState()
+
 
   const [btnFav, setBtnFav] = useState()
 
@@ -25,7 +24,7 @@ const Buttons = ({setup, punchline, id , btnState}) => {
 
   useEffect(()=>{
     setBtnFav(false)
-    setBtnLike(false)
+   
   }, [setup])
 
  
@@ -53,7 +52,7 @@ const Buttons = ({setup, punchline, id , btnState}) => {
     })
 
     toast.success('Check your favs!', {
-      position: "bottom-right",
+      position: "top-center",
       autoClose: 1400,
       hideProgressBar: true,
       closeOnClick: true,
@@ -72,12 +71,7 @@ const Buttons = ({setup, punchline, id , btnState}) => {
 
       <div className='mt-20 flex gap-4  items-start justify-end'>
 
-       <div className='relative button-container transition-all duration-200 hover:text-yellow-500'>
-
-         {btnLike ? <AiFillLike className='text-3xl cursor-pointer text-yellow-500' onClick={(()=> setBtnLike(false))} />  : <AiOutlineLike className='text-3xl cursor-pointer ' onClick={(()=> setBtnLike(true))} />}
-
-         <span className='absolute bottom-[-30px] button-name text-yellow-500 '>Like</span>
-       </div>
+       
 
        {/* FAV BUTTON */}
 
@@ -91,7 +85,7 @@ const Buttons = ({setup, punchline, id , btnState}) => {
       </div>
       
       <ToastContainer 
-          position="bottom-right"
+          position="top-center"
           autoClose={1400}
           limit={2}        
           newestOnTop={false}
