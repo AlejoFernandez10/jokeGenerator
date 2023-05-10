@@ -77,7 +77,7 @@ const Buttons = ({setup, punchline, id , btnState}) => {
 
        <div className='relative button-container transition-all duration-200 hover:text-yellow-500 mt-0.5'>
 
-          {btnFav ? <MdOutlineFavorite className='text-3xl cursor-pointer text-yellow-500' onClick={(()=> setBtnFav(false))} />  : <MdOutlineFavoriteBorder className='text-3xl cursor-pointer  ' onClick={(()=> setBtnFav(true) & addToFavs()  )} />}
+          {btnFav ? <MdOutlineFavorite className='text-3xl cursor-pointer text-yellow-500 pl-2' onClick={(()=> setBtnFav(false))} />  : <MdOutlineFavoriteBorder className='text-3xl cursor-pointer  ' onClick={(()=> setBtnFav(true) & addToFavs()  )} />}
 
           <span className='absolute bottom-[-30px] button-name text-yellow-500 '>Fav</span>
         </div>

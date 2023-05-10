@@ -2,7 +2,7 @@
 
 import React,{useContext, useState}  from 'react'
 import { Context } from '@/Context/ContextProvider'
-import {MdOutlineFavorite, MdOutlineFavoriteBorder} from 'react-icons/md'
+
 import Link from 'next/link'
 import { toast, ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

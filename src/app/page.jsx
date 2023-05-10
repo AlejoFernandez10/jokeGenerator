@@ -41,17 +41,17 @@ export default function Home() {
   
 
   return (
-    <main className="flex min-h-screen relative flex-col items-center justify-between p-24 pl-4  lg:pl-24 pb-10 text-white">
+    <main className="flex  relative flex-col items-center justify-between p-24 pl-4  lg:pl-24 pb-0 text-white">
       
       <div className='w-[95%] min-h-[60vh] flex flex-col  justify-center  max-w-[800px]'>
 
       <div className='mb-20  '>
-        <h1 className={`text-lg font-semibold pb-10 text-white flex flex-col gap-4 ${!joke && 'text-center'} `}> {joke && 'Setup:'} <span>{joke ?   joke.setup : 'Generate jokes and have fun!'} </span></h1>  
+        <h1 className={`text-base sm:text-lg  font-semibold pb-10 text-white flex flex-col gap-4 ${!joke && 'text-center'} `}> {joke && 'Setup:'} <span>{joke ?   joke.setup : 'Generate jokes and have fun!'} </span></h1>  
 
-        <p className='text-base font-semibold gap-3  flex flex-col'>
+        <p className=' font-semibold gap-3 text-xs sm:text-base flex flex-col'>
           
           {joke && 'Punchline:'}
-        <span className='text-gray-300'>{joke ? joke.punchline : ''} </span>
+        <span className='text-gray-300 '>{joke ? joke.punchline : ''} </span>
          </p>
 
         {joke &&

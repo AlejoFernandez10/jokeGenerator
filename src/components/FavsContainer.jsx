@@ -82,7 +82,7 @@ const FavsContainer = () => {
 
                             {favs.map((fav)=>(
 
-                            <li key={fav.id} className='relative'>
+                            <li key={fav.id} onClick={()=> setOpen(false)} className='relative'>
 
                               <FavCard setup={fav.setup} id={fav.id} punchline={fav.punchline} />                              
                                 

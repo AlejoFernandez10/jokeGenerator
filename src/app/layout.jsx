@@ -23,6 +23,8 @@ export default function RootLayout({ children }) {
         {children}
         
         </ContextProvider>
+
+        <footer className='w-full'></footer>
         </body>
     </html>
   )
