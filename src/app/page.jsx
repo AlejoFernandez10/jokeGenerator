@@ -10,13 +10,12 @@ import {FiRefreshCcw} from 'react-icons/fi'
 
 const options = {
   method: 'GET',
-  url: 'https://dad-jokes.p.rapidapi.com/random/joke/png',
+  url: 'https://dad-jokes.p.rapidapi.com/random/joke',
   headers: {
     'X-RapidAPI-Key': '82226da186mshf53c92b3803a30fp11a5c4jsnb984c601f71f',
     'X-RapidAPI-Host': 'dad-jokes.p.rapidapi.com'
   }
 };
-
 
 export default function Home() {
 
@@ -41,18 +40,18 @@ export default function Home() {
   
 
   return (
-    <main className="flex  relative flex-col items-center justify-between p-24 pl-4  lg:pl-24 pb-0 text-white">
+    <main className="flex  relative flex-col items-center justify-between  text-white">
       
       <div className='w-[95%] min-h-[60vh] flex flex-col  justify-center  max-w-[800px]'>
 
-      <div className='mb-20  '>
+     {/*  <div className='mb-20  '>
         <h1 className={`text-base sm:text-lg  font-semibold pb-10 text-white flex flex-col gap-4 ${!joke && 'text-center'} `}> {joke && 'Setup:'} <span>{joke ?   joke.setup : 'Generate jokes and have fun!'} </span></h1>  
 
-        <p className=' font-semibold gap-3 text-xs sm:text-base flex flex-col'>
+       <p className=' font-semibold gap-3 text-xs sm:text-base flex flex-col'>
           
           {joke && 'Punchline:'}
         <span className='text-gray-300 '>{joke ? joke.punchline : ''} </span>
-         </p>
+         </p> 
 
         {joke &&
 
@@ -72,7 +71,9 @@ export default function Home() {
           <FiRefreshCcw className='text-2xl  ' /> 
             Regenerate
         </div>
-      }
+      }  */}
+
+      <h1>Jokes api is collapsed, this app will be functional once the api works again</h1>
 
     </div>
 
