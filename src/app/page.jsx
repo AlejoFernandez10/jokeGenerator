@@ -73,7 +73,7 @@ export default function Home() {
         </div>
       }  */}
 
-      <h1>Jokes api is collapsed, this app will be functional once the api works again</h1>
+      <h1 className='text-center'>Jokes api is collapsed, this app will be functional once the api works again</h1>
 
     </div>
 
