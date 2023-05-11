@@ -27,8 +27,8 @@ export default function Home() {
 
       const response = await axios.request(options)
       const data = response.data
-
-      setJoke(data.body)      
+      
+      setJoke(data.body[0])      
     }
     
     const activeRefreshBtn =()=>{
@@ -37,14 +37,14 @@ export default function Home() {
       }, 500)
     }
   
-  
+ 
 
   return (
     <main className="flex  relative flex-col items-center justify-between  text-white">
       
       <div className='w-[95%] min-h-[60vh] flex flex-col  justify-center  max-w-[800px]'>
 
-     {/*  <div className='mb-20  '>
+     <div className='mb-20  '>
         <h1 className={`text-base sm:text-lg  font-semibold pb-10 text-white flex flex-col gap-4 ${!joke && 'text-center'} `}> {joke && 'Setup:'} <span>{joke ?   joke.setup : 'Generate jokes and have fun!'} </span></h1>  
 
        <p className=' font-semibold gap-3 text-xs sm:text-base flex flex-col'>
@@ -71,9 +71,9 @@ export default function Home() {
           <FiRefreshCcw className='text-2xl  ' /> 
             Regenerate
         </div>
-      }  */}
+      }  
 
-      <h1 className='text-center'>Jokes api is collapsed, this app will be functional once the api works again</h1>
+      
 
     </div>
 
